@@ -141,20 +141,23 @@ function displayFeaturedMovie(movies){
     genreId.forEach(id => {
       const genres_index = genres.findIndex(obj => obj.id == id);
       const genre_name = genres[genres_index].name;
-      genre.push(genre_name);
+      genre.push(' '+genre_name);
    });
     const title = movie.title;
+    const rate = movie.vote_average;
     const date = movie.release_date;
     const overview = movie.overview;
     const featureImgDiv = document.querySelector('.feature_img');
     const featureDescDiv = document.querySelector('.feature_desc');
     featureImgDiv.innerHTML = `<img src="${img}" alt="movie poster">`
     featureDescDiv.innerHTML = `
-            <span class="feature_desc_genre">${genre}</span>
-            <span class="feature_desc_date">${date}</span>
-            <div class="feature_desc_title">${title}</div>
-            <div class="feature_desc_overview">${overview}</div>
-            `;
+         <span class="feature_desc_title">${title}</span>
+         <div class="feature_desc_genre_rate">
+            <span id="_genre">${genre}</span>
+            <span id="_rate">${rate}</span>
+         </div>           
+         <span class="feature_desc_date">${date}</span>
+         <div class="feature_desc_overview">${overview}</div>`;
 }
 
 //Displaying 3 popular movies
@@ -191,7 +194,6 @@ function displayMovies(movies){
                 <span class="movie_desc_date">${date}</span>
                 <div class="movie_desc_title">${title}</div>
                 <div class="movie_desc_overview">${overview}</div>
-                <button class="movie_desc_btn"><i class="far fa-heart"></i></button>
             </div>
         `;
         movieContainer.appendChild(movieEl);

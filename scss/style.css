@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  background-color: #f2f1de;
   font-family: "Inter", sans-serif;
 }
 
@@ -65,16 +64,17 @@ header span {
 }
 
 .intro .intro_filter ul button:hover {
-  background-color: #00a1af;
+  background-color: #03afc0;
   color: #efecb6;
   cursor: pointer;
 }
 
 #contents_feature {
+  margin-top: 4rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: minmax(30rem, 1fr) 1fr;
+      grid-template-columns: minmax(30rem, 1fr) 1fr;
   grid-gap: 0;
   grid-auto-rows: 40rem;
   -webkit-box-pack: center;
@@ -84,11 +84,65 @@ header span {
 
 #contents_feature .feature_img {
   width: 100%;
+  min-width: 20rem;
   height: 100%;
   overflow: hidden;
 }
 
 #contents_feature .feature_img img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#contents_feature .feature_desc {
+  background-color: #efecb6;
+  color: #424132;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  font-weight: 700;
+}
+
+#contents_feature .feature_desc .feature_desc_title {
+  font-size: 3rem;
+  color: #01606a;
+}
+
+#contents_feature .feature_desc .feature_desc_genre_rate {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contents_feature .feature_desc .feature_desc_genre_rate #_rate {
+  background-color: #e52b45;
+  color: #efecb6;
+  border-radius: 50px;
+  padding: 0.4rem;
+}
+
+#contents_feature .feature_desc .feature_desc_overview {
+  margin-top: 2rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 10;
+  overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */

@@ -9,11 +9,11 @@ $weight_semiB: 600;
 $weight_bold: 700;
 
 // Colors
-$primary_color: #00a1af;
+$primary_color: #03afc0;
 $secondary_color: #e52b45;
 $yellow: #efecb6;
-$teal_dark: #006770;
-$black: #424132;
+$teal_dark: #01606a;
+$grey_dark: #424132;
 $neutral000: #7f7f7f;
 $neutral100: #d7d8d6;
 $neutral200: #f2f1de;
@@ -21,7 +21,6 @@ $neutral200: #f2f1de;
 // Global setting
 body {
   margin: 0;
-  background-color: $neutral200;
   font-family: $fonts_main;
 
   header,
@@ -56,7 +55,7 @@ header {
 // Section-intro
 .intro {
   h1 {
-    color: $black;
+    color: $grey_dark;
     font-size: 4rem;
     margin-bottom: 0;
   }
@@ -97,17 +96,58 @@ header {
 
 // Main Featured movie
 #contents_feature {
+  margin-top: 4rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(30rem, 1fr) 1fr;
   grid-gap: 0;
   grid-auto-rows: 40rem;
   justify-content: center;
   .feature_img {
     width: 100%;
+    min-width: 20rem;
     height: 100%;
     overflow: hidden;
     img {
       width: 100%;
+      object-fit: cover;
+    }
+  }
+  .feature_desc {
+    background-color: $yellow;
+    color: $grey_dark;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    font-weight: $weight_bold;
+
+    .feature_desc_title {
+      font-size: 3rem;
+      // font-weight: $weight_bold;
+      color: $teal_dark;
+    }
+
+    .feature_desc_genre_rate {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      #_rate {
+        background-color: $secondary_color;
+        color: $yellow;
+        border-radius: 50px;
+        padding: 0.4rem;
+      }
+    }
+
+    .feature_desc_overview {
+      margin-top: 2rem;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 10;
+      overflow: hidden;
     }
   }
 }
