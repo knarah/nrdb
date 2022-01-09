@@ -1,7 +1,7 @@
 'use strict';
 let movies = [];
 const BASE_URL = 'https://api.themoviedb.org/3/';
-const API_KEY = config.API_KEY;
+const API_KEY = '6647a9cd3b41e0507ce1ab8d279dbab5';
 const IMG_URL ='https://image.tmdb.org/t/p/w500';
 const GENRE_URL ='/genre/movie/list';
 
