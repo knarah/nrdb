@@ -160,14 +160,13 @@ function displayFeaturedMovie(movies){
          <div class="feature_desc_overview">${overview}</div>`;
 }
 
-//Displaying 3 popular movies
+//Displaying 6 popular movies
 function displayMovies(movies){
-   movies = movies.slice(1, 4);
+   movies = movies.slice(1, 7);
 
     const movieContainer = document.querySelector('#contents_movie');
     movieContainer.innerHTML = '';
     movies.forEach(movie => {
-        
         const img = IMG_URL+movie.poster_path;
         const genreId = movie.genre_ids;
       //   API gives Genre_Ids, Need to get Genre in string
@@ -180,22 +179,24 @@ function displayMovies(movies){
        
         const title = movie.title;
         const date = movie.release_date;
+        const rate = movie.vote_average;
         const overview = movie.overview;
         const movieEl = document.createElement('div');
         
         movieEl.classList.add('movie_card');
-        
         movieEl.innerHTML = `
-            <div class="movie_img">
-                <span class="movie_img_genre">${genre}</span>
-                <img src="${img}" alt="movie poster">
-            </div>
-            <div class="movie_desc">
-                <span class="movie_desc_date">${date}</span>
-                <div class="movie_desc_title">${title}</div>
-                <div class="movie_desc_overview">${overview}</div>
-            </div>
-        `;
+               <div class="movie_img">
+                  <img src="${img}" alt="${title}">
+               </div>
+               <div class="movie_desc">
+                  <div class="movie_desc_title_rate">
+                     <span id="_title">${title}</span>
+                     <span id="_rate">${rate}</span>
+                  </div>   
+                  <span class="movie_desc_genre">${genre}</span>
+                  <span class="movie_desc_date">${date}</span>
+                  <div class="movie_desc_overview">${overview}</div>
+               </div>`;
         movieContainer.appendChild(movieEl);
     });
 }

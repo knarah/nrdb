@@ -5,15 +5,15 @@ body {
 
 body header,
 body footer {
-  padding: 0 4rem;
+  padding: 0 6rem;
 }
 
 body section {
-  margin: 0 4rem;
+  margin: 0 6rem;
 }
 
 header {
-  height: 7rem;
+  height: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,12 +25,12 @@ header {
 }
 
 header img {
-  width: 4rem;
-  height: 3.5rem;
+  width: 3.5rem;
+  height: 3rem;
 }
 
 header span {
-  font-size: 4.5rem;
+  font-size: 4rem;
   padding: 1rem 0 0 0.5rem;
   color: #e52b45;
   font-family: "Lalezar", cursive;
@@ -76,7 +76,7 @@ header span {
   -ms-grid-columns: minmax(30rem, 1fr) 1fr;
       grid-template-columns: minmax(30rem, 1fr) 1fr;
   grid-gap: 0;
-  grid-auto-rows: 40rem;
+  grid-auto-rows: 37rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -84,7 +84,7 @@ header span {
 
 #contents_feature .feature_img {
   width: 100%;
-  min-width: 20rem;
+  min-width: 15rem;
   height: 100%;
   overflow: hidden;
 }
@@ -143,6 +143,92 @@ header span {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 10;
+  overflow: hidden;
+}
+
+#contents_movie {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 1rem;
+  -webkit-column-gap: 3.5rem;
+          column-gap: 3.5rem;
+}
+
+#contents_movie .movie_card {
+  margin-top: 4rem;
+  min-width: 20rem;
+  height: 35rem;
+}
+
+#contents_movie .movie_card .movie_img {
+  width: 100%;
+  height: 20rem;
+  overflow: hidden;
+}
+
+#contents_movie .movie_card .movie_img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#contents_movie .movie_card .movie_desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#contents_movie .movie_card .movie_desc .movie_desc_title_rate {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#contents_movie .movie_card .movie_desc .movie_desc_title_rate #_title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #01606a;
+}
+
+#contents_movie .movie_card .movie_desc .movie_desc_title_rate #_rate {
+  font-size: 0.8rem;
+  background-color: #e52b45;
+  color: #efecb6;
+  border-radius: 50px;
+  padding: 0.2rem;
+}
+
+#contents_movie .movie_card .movie_desc .movie_desc_genre {
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  color: #424132;
+}
+
+#contents_movie .movie_card .movie_desc .movie_desc_date {
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  color: #424132;
+}
+
+#contents_movie .movie_card .movie_desc .movie_desc_overview {
+  margin-top: 1rem;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
   overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */
