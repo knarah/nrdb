@@ -22,9 +22,9 @@ $neutral200: #f2f1de;
 // Media queries
 
 $media_queries: (
-  "mobile": "only screen and (max-width: 667px)",
-  "tablet": "only screen and (min-width: 668px) and (max-width: 787px )",
-  "desktop": "only screen and (min-width: 788px)",
+  "mobile": "only screen and (max-width: 600px)",
+  "tablet": "only screen and (min-width: 601px) and (max-width: 768px )",
+  "desktop": "only screen and (min-width: 769px)",
   "retina2":
     "only screen and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi)",
   "retina3":
