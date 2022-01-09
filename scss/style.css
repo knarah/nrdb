@@ -154,6 +154,7 @@ header span {
   row-gap: 1rem;
   -webkit-column-gap: 3.5rem;
           column-gap: 3.5rem;
+  margin-bottom: 4rem;
 }
 
 #contents_movie .movie_card {
@@ -211,13 +212,9 @@ header span {
   padding: 0.2rem;
 }
 
-#contents_movie .movie_card .movie_desc .movie_desc_genre {
-  margin-top: 0.4rem;
-  font-size: 0.8rem;
-  color: #424132;
-}
-
+#contents_movie .movie_card .movie_desc .movie_desc_genre,
 #contents_movie .movie_card .movie_desc .movie_desc_date {
+  font-family: "Lato", sans-serif;
   margin-top: 0.4rem;
   font-size: 0.8rem;
   color: #424132;
@@ -226,9 +223,46 @@ header span {
 #contents_movie .movie_card .movie_desc .movie_desc_overview {
   margin-top: 1rem;
   font-weight: 600;
+  line-height: 1.3rem;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 6;
   overflow: hidden;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #1d1d15;
+  height: 7rem;
+}
+
+footer .footer_left img {
+  width: 3rem;
+  height: 2.5rem;
+}
+
+footer .footer_left a {
+  text-decoration: none;
+  font-size: 3.5rem;
+  padding: 1rem 0 0 0.5rem;
+  color: #efecb6;
+  font-family: "Lalezar", cursive;
+}
+
+footer .footer_left a:visited,
+footer .footer_left a :link {
+  color: #efecb6;
+}
+
+footer .footer_right {
+  color: #d7d8d6;
 }
 /*# sourceMappingURL=style.css.map */

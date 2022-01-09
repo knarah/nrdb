@@ -14,6 +14,7 @@ $secondary_color: #e52b45;
 $yellow: #efecb6;
 $teal_dark: #01606a;
 $grey_dark: #424132;
+$black: #1d1d15;
 $neutral000: #7f7f7f;
 $neutral100: #d7d8d6;
 $neutral200: #f2f1de;
@@ -158,6 +159,7 @@ header {
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 1rem;
   column-gap: 3.5rem;
+  margin-bottom: 4rem;
   .movie_card {
     margin-top: 4rem;
     min-width: 20rem;
@@ -193,12 +195,9 @@ header {
         }
       }
 
-      .movie_desc_genre {
-        margin-top: 0.4rem;
-        font-size: 0.8rem;
-        color: $grey_dark;
-      }
+      .movie_desc_genre,
       .movie_desc_date {
+        font-family: $fonts_secondary;
         margin-top: 0.4rem;
         font-size: 0.8rem;
         color: $grey_dark;
@@ -206,11 +205,42 @@ header {
       .movie_desc_overview {
         margin-top: 1rem;
         font-weight: $weight_semiB;
+        line-height: 1.3rem;
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 6;
         overflow: hidden;
       }
     }
+  }
+}
+
+// Footer
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $black;
+  height: 7rem;
+  .footer_left {
+    img {
+      width: 3rem;
+      height: 2.5rem;
+    }
+    a {
+      text-decoration: none;
+      font-size: 3.5rem;
+      padding: 1rem 0 0 0.5rem;
+      color: $yellow;
+      font-family: $fonts_logo;
+
+      &:visited,
+      :link {
+        color: $yellow;
+      }
+    }
+  }
+  .footer_right {
+    color: $neutral100;
   }
 }
