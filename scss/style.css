@@ -12,6 +12,14 @@ body section {
   margin: 0 6rem;
 }
 
+@media only screen and (max-width: 667px), only screen and (min-width: 668px) and (max-width: 1024px) {
+  body header,
+  body footer,
+  body section {
+    margin: 0 1rem;
+  }
+}
+
 header {
   height: 5rem;
   display: -webkit-box;
@@ -146,6 +154,32 @@ header span {
   overflow: hidden;
 }
 
+@media only screen and (max-width: 667px) {
+  #contents_feature {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #contents_feature .feature_desc_overview {
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (min-width: 668px) and (max-width: 1024px) {
+  #contents_feature .feature_desc_overview {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+  }
+}
+
 #contents_movie {
   display: -ms-grid;
   display: grid;
@@ -155,6 +189,32 @@ header span {
   -webkit-column-gap: 3.5rem;
           column-gap: 3.5rem;
   margin-bottom: 4rem;
+}
+
+@media only screen and (max-width: 667px) {
+  #contents_movie {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 668px) and (max-width: 1024px) {
+  #contents_movie {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+  }
 }
 
 #contents_movie .movie_card {
@@ -264,5 +324,44 @@ footer .footer_left a :link {
 
 footer .footer_right {
   color: #d7d8d6;
+}
+
+@media only screen and (max-width: 667px), only screen and (min-width: 668px) and (max-width: 1024px) {
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+  }
+  footer .footer_left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .footer_left img {
+    width: 2rem;
+    height: 2rem;
+  }
+  footer .footer_left a {
+    font-size: 2rem;
+  }
+  footer .footer_right {
+    margin: 0;
+    padding-bottom: 1rem;
+    font-size: 0.5rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
